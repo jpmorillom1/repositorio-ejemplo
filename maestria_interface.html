@@ -1,0 +1,866 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maestría en Seguridad Social - UCE</title>
+    <style>
+        :root {
+            --primary-color: #003c71; /* Color principal UCE azul oscuro */
+            --secondary-color: #003c71; /* Color secundario azul más claro */
+            --accent-color: #c0392b; /* Color de acento para botones y elementos destacados */
+            --light-color: #f5f5f5;
+            --dark-color: #333;
+            --gray-color: #f0f0f0;
+            --text-color: #333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #fff;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        
+                .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+        
+        .cta-button:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+        }
+
+        .programa-seccion {
+        background-color: #f0f8ff; /* Un azul muy claro (AliceBlue) */
+        padding: 20px; /* Opcional: para darle un poco de espacio interno */
+        margin-bottom: 20px; /* Opcional: para separar los divs */
+        border-radius: 8px; /* Opcional: para bordes redondeados */
+        }
+
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-item {
+            margin-left: 20px;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: 
+                linear-gradient(0deg, rgba(0, 60, 113, 01) 0%, rgba(0, 60, 113, 0.2) 100%),
+                url('https://i.ibb.co/ym98wj03/maestricafca.pnghttps://i.ibb.co/S7BcFp0J/maestricafca.png') center/cover no-repeat;
+            color: white;
+            padding: 60px 0;
+            position: relative;
+        }
+        
+        .hero-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .hero-info {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        
+        .hero-title-box {
+            background-color: #003C71;
+            border-left: 5px solid #0066b3;
+            padding: 20px;
+            margin-bottom: 25px;
+            max-width: 500px;
+        }
+        
+        .hero-title-box h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        .hero-title-box h3 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+        
+        .hero-text {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        
+        .inscribete {
+            font-size: 1.8rem;
+            font-style: italic;
+            font-weight: 600;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Iconos */
+        .icons-section {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .icons-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            max-width: 400px;
+        }
+        
+        .icon-box {
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        
+        .icon-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .icon-box img {
+            width: 60%;
+            height: auto;
+        }
+        
+        /* Inversion */
+        .inversion-box {
+            background-color: #0066b3;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            max-width: 300px;
+            text-align: center;
+        }
+        
+        .inversion-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .inversion-title i {
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .inversion-details {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+        
+        .inversion-item {
+            text-align: center;
+        }
+        
+        .inversion-label {
+            font-size: 0.9rem;
+            margin-bottom: 3px;
+        }
+        
+        .inversion-value {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        /* CTA */
+        .cta-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 30px;
+        }
+        
+        .preinscripciones-box {
+            background-color: #8B0000;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 15px;
+            position: relative;
+            width: 300px;
+        }
+        
+        .preinscripciones-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .preinscripciones-status {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        
+        /* Main Content */
+        .main-content {
+            padding: 50px 0;
+        }
+        
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .column {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        /* Section Styles */
+        .section-title {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        /* Cards */
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .card-header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 15px 20px;
+        }
+        
+        .card-body {
+            padding: 20px;
+        }
+        
+        /* Info Block */
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .info-icon {
+            color: var(--secondary-color);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        /* Lists */
+        ul {
+            list-style-type: none;
+            margin-left: 20px;
+        }
+        
+        ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        ul li:before {
+            content: '•';
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Form */
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .form-check-label {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+        
+        .form-check-input {
+            margin-right: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-title {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: 0.3s;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+        
+        /* Accordion for Plan de Estudios */
+        .accordion {
+            margin-bottom: 15px;
+        }
+        
+        .accordion-header {
+            background-color: var(--light-color);
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s;
+        }
+        
+        .accordion-header:hover {
+            background-color: #e8e8e8;
+        }
+        
+        .accordion-content {
+            background-color: white;
+            padding: 15px;
+            border-radius: 0 0 5px 5px;
+            margin-top: 1px;
+            display: none;
+        }
+        
+        .accordion-icon {
+            color: var(--secondary-color);
+            transition: 0.3s;
+        }
+        
+        .responsive-video {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .responsive-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+
+        
+        
+        @keyframes pulse {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(5px); }
+            100% { transform: translateX(0); }
+        }
+        
+        /* Contact Info */
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 15px;
+        }
+        
+        .contact-item i {
+            margin-right: 5px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column;
+            }
+            
+            .hero-info, .icons-section {
+                min-width: 100%;
+            }
+            
+            .hero-title-box {
+                max-width: 100%;
+            }
+            
+            .icons-grid {
+                max-width: 350px;
+                margin: 0 auto;
+            }
+            
+            .inversion-box, .preinscripciones-box {
+                margin: 20px auto;
+            }
+        }
+        
+
+        
+    </style>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" ref="stylesheet">
+</head>
+<body>
+    
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-info">
+                    <div class="hero-title-box">
+                        <h2>Maestría</h2>
+                        <h3>Seguridad Social, Seguros de Salud y Complementarios Previsionales</h3>
+                    </div>
+                    
+                    <p class="hero-text">Especializa tus conocimientos en <strong>Seguridad Social, Seguros de Salud y Fondos Complementarios Previsionales</strong> con un programa de alta calidad académica.</p>
+                    
+                    <div class="inversion-box">
+                        <div class="inversion-title">
+                            <i class="fas fa-dollar-sign"></i>
+                            INVERSIÓN
+                        </div>
+                        <div class="inversion-details">
+                            <div class="inversion-item">
+                                <div class="inversion-label">Inscripción:</div>
+                                <div class="inversion-value">$ 80</div>
+                            </div>
+                            <div class="inversion-item">
+                                <div class="inversion-label">Matrícula:</div>
+                                <div class="inversion-value">$ 3.700</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cta-section">
+                        <div class="preinscripciones-box">
+                            <div class="preinscripciones-title">PREINSCRIPCIONES</div>
+                            <div class="preinscripciones-status">ABIERTAS</div>
+
+                </div>
+
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i> 0998670394 | (02)-2-525-405 Ext. 0 137
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i> fca.posgrados@uce.edu.ec
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i> https://www.uce.edu.ec/web/fca
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <div class="container">
+
+
+            <div class="programa-seccion">
+                <h2 class="section-title">REQUISITOS </h2>
+                <ul>
+                    <li>Tener Título de tercer nivel registrado en la SENESCYT en las titulaciones señaladas en el perfil de ingreso, para el caso de estudiantes extranjeros el título debe constar con la apostilla correspondiente.</li>
+                    <li>Copia a color de la cédula de ciudadanía o pasaporte, certificado de votación actualizado.</li>
+                    <li>Hoja de vida actualizada, documentos de soporte, tales como: títulos, certificados de cursos, seminarios, certificados de trabajo, otros.</li>
+                    <li>Copia certificada del Acta de Grado del título de tercer nivel.</li>
+                </ul>
+            </div> <br>
+
+            
+            <div id="programa">
+                <h2 class="section-title">PRESENTACIÓN DE LA MAESTRÍA</h2>
+                <p>El objetivo de la <b>Maestría de Seguridad Social, Seguros de Salud y Complementarios Previsionales</b> , es especializar a profesionales que trabajan o están interesados en actividades relacionados a <b>Previsión social, servicios de salud Prepagada, Administración de Seguros de Salud, Fondos de Jubilación, y Fondos de Cesantía</b>, con sólidos conocimientos que les permitan crecer profesionalmente y afianzar su desempeño laboral.</p>
+            </div> <br>
+            
+            <div id="programa">
+                <h2 class="section-title">PRESENTACIÓN DE LA MAESTRÍA</h2>
+                <p>El objetivo de la <b>Maestría de Seguridad Social, Seguros de Salud y Complementarios Previsionales</b> , es especializar a profesionales que trabajan o están interesados en actividades relacionados a <b>Previsión social, servicios de salud Prepagada, Administración de Seguros de Salud, Fondos de Jubilación, y Fondos de Cesantía</b>, con sólidos conocimientos que les permitan crecer profesionalmente y afianzar su desempeño laboral.</p>
+            </div> <br>
+
+
+
+            
+
+            <div class="flex-container">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>DATOS GENERALES</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="info-item">
+                                <span class="info-icon"><i class="fa fa-check"></i></span>
+                                <div>
+                                    <strong>Grado a Obtener</strong>
+                                    <p>Magíster en Seguridad Social, Seguros de Salud y Complementarios Previsionales</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon"><i class="fa fa-cogs"></i></span>
+                                <div>
+                                    <strong>Resolución CES</strong>
+                                    <p>RPC-SO-16-No. 193-2022</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon"><i class="fa fa-search"></i></span>
+                                <div>
+                                    <strong>Denominación del programa</strong>
+                                    <p>Programa de Posgrado Profesional</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon"><i class="fa fa-users"></i></span>
+                                <div>
+                                    <strong>Cohorte</strong>
+                                    <p>Segunda</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon"><i class="fa fa-clock"></i></span>
+                                <div>
+                                    <strong>Tiempo de duración</strong>
+                                    <p>2 semestres</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon"><i class="fa fa-id-badge"></i></span>
+                                <div>
+                                    <strong>Número de Cupos</strong>
+                                    <p>50 profesionales</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon"><i class="fa fa-building"></i></span>
+                                <div>
+                                    <strong>Modalidad</strong>
+                                    <p>Presencial</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon"><i class="fa fa-clock"></i></span>
+                                <div>
+                                    <strong>Horario</strong>
+                                    <p>Sábado y Domingo de 08:00 a 16:30 (cada ocho días)</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon"><i class="fa fa-calendar"></i></span>
+                                <div>
+                                    <strong>Fecha de Inicio</strong>
+                                    <p>2024</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon"><i class="fa fa-map-marker"></i></span>
+                                <div>
+                                    <strong>Lugar de Ejecución</strong>
+                                    <p>Quito, Campus Universitario, Dirección de Posgrado de la Facultad de Ciencias Administrativas UCE, 4to Piso</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="plan-estudios">
+                        <h2 class="section-title">PLAN DE ESTUDIOS</h2>
+                        
+                        <h3 style="color: var(--secondary-color); margin-top: 20px; margin-bottom: 15px;">Primer Semestre</h3>
+                        <ul>
+                            <li>Marco Jurídico e Instituciones de la Seguridad Social</li>
+                            <li>Sistema de Pensiones</li>
+                            <li>Seguros de Salud</li>
+                            <li>Seguridad y salud laboral</li>
+                            <li>Gestión Administrativa, Financiera y Gerencial</li>
+                        </ul>
+                        
+                        <h3 style="color: var(--secondary-color); margin-top: 20px; margin-bottom: 15px;">Segundo Semestre</h3>
+                        <ul>
+                            <li>Bases Técnicas Estadísticas y Actuariales</li>
+                            <li>Análisis Actuarial en Pensiones y Seguros de Salud</li>
+                            <li>Fondos Complementarios Previsionales cerrados (FCPCs)</li>
+                            <li>Planificación estratégica</li>
+                            <li>Inversiones en el Seguro Social</li>
+                            <li>Metodología de la Investigación</li>
+                            <li>Trabajo de Investigación</li>
+                        </ul>
+                        
+                        <div style="text-align: center; margin-top: 30px;">
+                            <span style="color: var(--secondary-color); font-size: 14px;">DESCARGUE EL BROCHURE</span>
+                            <div style="margin-top: 10px;">
+                                <a href="https://uceedu-my.sharepoint.com/:b:/g/personal/fca_comunicacion_cultura_uce_edu_ec/Ee6tCGSlnVZBuaO6e0YOKPUBYrkWNeiPM7HZqAm930EZ_A?e=CjfyMD" target="_blank" class="cta-button">Descargar PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>PERFIL DE INGRESO</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Profesionales con títulos de tercer nivel en grado de Administración, Economía, Finanzas, Matemáticas, Ciencias Actuariales, Estadística, Finanzas, Seguros, Ingeniería, Salud, servicios de higiene y salud ocupacional, Ciencias sociales, derecho. Los profesionales que se adhieran al programa deberán ser aquellos que deseen ampliar o consolidar sus conocimientos, atendiendo la problemática social, técnica, administrativa, financiera y política, que engloba la seguridad social, los seguros privados y complementarios previsionales.</p>
+                        </div>
+                    </div>
+
+                    <div id="requisitos" class="card">
+                        <div class="card-header">
+                            <h3>REQUISITOS</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Tener Título de tercer nivel registrado en la SENESCYT en las titulaciones señaladas en el perfil de ingreso, para el caso de estudiantes extranjeros el título debe constar con la apostilla correspondiente.</li>
+                                <li>Copia a color de la cédula de ciudadanía o pasaporte, certificado de votación actualizado.</li>
+                                <li>Hoja de vida actualizada, documentos de soporte, tales como: títulos, certificados de cursos, seminarios, certificados de trabajo, otros.</li>
+                                <li>Copia certificada del Acta de Grado del título de tercer nivel.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>INVERSIÓN</h3>
+                        </div>
+                        <div class="card-body">
+                            <h4 style="color: var(--secondary-color); margin-bottom: 10px;">Costos</h4>
+                            <ul>
+                                <li><strong>Inscripción:</strong> USD 80</li>
+                                <li><strong>Matrícula:</strong> USD 3.700</li>
+                            </ul>
+                            
+                            <h4 style="color: var(--secondary-color); margin-top: 20px; margin-bottom: 10px;">Formas de Pago</h4>
+                            <ul>
+                                <li>Contado</li>
+                                <li>Tarjeta de Crédito; más información en la tesorería de la Facultad</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>MÁS INFORMACIÓN</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="responsive-video">
+                                <iframe src="https://www.youtube.com/embed/k_bbFsPLVyI?si=3tRSZ9Q3oZ7GZyPk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="contacto" class="card">
+                        <div class="card-header">
+                            <h3>CONTACTO</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Av. América y San Gregorio, Dirección de Posgrado, Facultad de Ciencias Administrativas UCE.<br>
+                            <strong>Correo:</strong> <a href="mailto:fca.posgrado@uce.edu.ec" style="color: var(--secondary-color);">fca.posgrado@uce.edu.ec</a><br>
+                            <strong>Teléfono:</strong> 022-525-405<br>
+                            <strong>Celular:</strong> 0998870394</p>
+                            
+                            <div style="text-align: center; margin-top: 20px;">
+                                <a href="https://wa.me/+593998870394?text=Buen" target="_blank" class="social-icon" style="background-color: #1daa61; width: 60px; height: 60px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="http://bit.ly/PreinscripcionMaestrias2024" target="_blank" class="cta-button">INICIAR PROCESO DE PREINSCRIPCIÓN</a>
+            </div>
+        </div>
+    </section>
+
+
